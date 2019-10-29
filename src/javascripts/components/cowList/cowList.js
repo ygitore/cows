@@ -6,14 +6,7 @@ const buildCows = () => {
   c.getCows()
     .then((response) => {
       // console.log(response);
-      const demCows = response.data.c;
-      console.log(demCows);
-      const cows = [];
-      Object.keys(demCows).forEach((cowId) => {
-        demCows[cowId].id = cowId;
-        cows.push(demCows[cowId]);
-      });
-      console.log('it worked!', cows);
+      console.log('cow array from cow list', response);
     })
     .catch((error) => {
       console.error('shit broke', error);
